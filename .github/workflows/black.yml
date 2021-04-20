@@ -1,4 +1,4 @@
-name: Lint Formatting 💅
+name: Black Formatting ✨ 🍰 ✨
 
 on: [push, pull_request]
 
