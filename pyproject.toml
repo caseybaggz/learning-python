@@ -6,6 +6,7 @@ authors = ["Casey Baggz <caseybaggz@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
+requests = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
 black = "^20.8b1"
