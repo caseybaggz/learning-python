@@ -15,16 +15,19 @@ def get_choice():
 
 
 def fetch_pokemon(choice):
-    req = requests.get("https://pokeapi.co/api/v2/pokemon/" + choice.lower())
+    url = "https://pokeapi.co/api/v2/pokemon/"
+    formatted_choice = choice.lower()
+    req = requests.get(f"{url}{formatted_choice}")
 
     if req.status_code == requests.codes.ok:
-        print(req.text)
+        print(req.json())
     else:
         req.raise_for_status()
 
 
-# Run program
+# Program
 
-start()
-choice = get_choice()
-fetch_pokemon(choice)
+if __name__ == "__main__":
+    start()
+    choice = get_choice()
+    fetch_pokemon(choice)
